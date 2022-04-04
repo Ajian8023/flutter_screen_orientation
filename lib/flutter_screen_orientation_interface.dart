@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 
 abstract class FlutterScreenOrientationService {
   //方向回调
-  late Function orientationCallback;
+  Function? orientationCallback;
 
   void setOrientationCallback(Function orientationCallback) {
     this.orientationCallback = orientationCallback;

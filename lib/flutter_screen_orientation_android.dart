@@ -4,8 +4,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_screen_orientation/flutter_screen_orientation_interface.dart';
 
 class FlutterScreenOrientationAndroidService extends FlutterScreenOrientationService {
-  MethodChannel _channel =
-      const MethodChannel('flutter_screen_orientation');
+  MethodChannel _channel = const MethodChannel('flutter_screen_orientation');
   int lastOrientation = -1;
 
   @override
@@ -17,7 +16,7 @@ class FlutterScreenOrientationAndroidService extends FlutterScreenOrientationSer
           return;
         }
         lastOrientation = orientation;
-        orientationCallback(orientation);
+        orientationCallback!(orientation);
       }
     });
     _channel.invokeMethod("init");

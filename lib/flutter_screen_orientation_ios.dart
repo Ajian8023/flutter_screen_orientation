@@ -9,7 +9,7 @@ class FlutterScreenOrientationIosService extends FlutterScreenOrientationService
   Future<void> init() async {
     _channel.setMethodCallHandler((MethodCall call) async {
       if (call.method == "orientationCallback" && orientationCallback != null) {
-        orientationCallback(int.parse(call.arguments));
+        orientationCallback!(int.parse(call.arguments));
       }
     });
     await _channel.invokeMethod('init');
