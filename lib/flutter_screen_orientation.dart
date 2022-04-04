@@ -6,8 +6,8 @@ import 'package:flutter_screen_orientation/flutter_screen_orientation_interface.
 import 'package:flutter_screen_orientation/flutter_screen_orientation_ios.dart';
 
 class FlutterScreenOrientation {
-  FlutterScreenOrientationService screenOrientationService;
-  static FlutterScreenOrientation self;
+  late FlutterScreenOrientationService screenOrientationService;
+  static late FlutterScreenOrientation self;
   static int portraitUp = 1;
   static int portraitDown = 2;
   static int landscapeLeft = 3;
